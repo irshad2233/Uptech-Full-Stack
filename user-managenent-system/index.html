@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-10">
+    <h1 class="text-3xl font-bold mb-6">User Management System</h1>
+
+<!-- Add User Form -->
+
+<div class="bg-white p-6 rounded shadow mb-6">
+
+<h2 class="text-xl mb-4">Add User</h2>
+
+<form id="userForm" class="grid grid-cols-2 gap-4">
+
+<input type="text" id="firstName" placeholder="First Name"
+class="border p-2">
+
+<input type="text" id="lastName" placeholder="Last Name"
+class="border p-2">
+
+<input type="email" id="email" placeholder="Email"
+class="border p-2">
+
+<input type="text" id="phone" placeholder="Phone"
+class="border p-2">
+
+<button class="bg-blue-500 text-white p-2 col-span-2">
+Add User
+</button>
+
+</form>
+
+</div>
+
+<!-- Search -->
+
+<input type="text" id="searchInput"
+placeholder="Search user..."
+class="border p-2 mb-4 w-full">
+
+<!-- Users Table -->
+
+<table class="w-full bg-white shadow rounded">
+
+<thead class="bg-gray-200">
+
+<tr>
+<th class="p-2">ID</th>
+<th class="p-2">First Name</th>
+<th class="p-2">Last Name</th>
+<th class="p-2">Email</th>
+<th class="p-2">Phone</th>
+<th class="p-2">Actions</th>
+</tr>
+
+</thead>
+
+<tbody id="userTable"></tbody>
+
+</table>
+    <script src="app.js"></script>
+</body>
+</html>
