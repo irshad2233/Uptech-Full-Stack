@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body  class="bg-gray-100">
+    <div class="max-w-7xl mx-auto p-6">
+
+<h1 class="text-3xl font-bold mb-6 text-center">Product Inventory System</h1>
+
+<!-- Filter -->
+<select id="categoryFilter" class="border p-2 mb-6">
+<option value="all">All Categories</option>
+<option value="electronics">electronics</option>
+<option value="jewelery">jewelery</option>
+<option value="men's clothing">men's clothing</option>
+<option value="women's clothing">women's clothing</option>
+</select>
+
+<!-- Add Product Form -->
+
+<div class="bg-white p-4 rounded shadow mb-8">
+<h2 class="text-xl font-semibold mb-3">Add Product</h2>
+
+<input id="title" placeholder="Title" class="border p-2 w-full mb-2">
+<input id="price" placeholder="Price" type="number" class="border p-2 w-full mb-2">
+<input id="description" placeholder="Description" class="border p-2 w-full mb-2">
+<input id="category" placeholder="Category" class="border p-2 w-full mb-2">
+<input id="image" placeholder="Image URL" class="border p-2 w-full mb-2">
+
+<button onclick="addProduct()" class="bg-blue-500 text-white px-4 py-2 rounded">
+Add Product
+</button>
+</div>
+
+<!-- Loading -->
+<div id="loading" class="text-center hidden">
+Loading Products...
+</div>
+
+<!-- Products -->
+
+<div id="products" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
+</div>
+
+</div>
+    <script src="app.js"></script>
+</body>
+</html>
